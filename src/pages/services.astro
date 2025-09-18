@@ -3,11 +3,10 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Services',
+  title: 'Serviços Estéticos',
 };
 ---
 
@@ -15,117 +14,105 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    tagline="Clínica de Estética"
+    title="Voucher 25% OFF em Todos os Procedimentos"
+    subtitle=""
+    actions={[{ variant: 'primary', text: 'Nossos Serviços', href: '#nossos-servicos' }]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
+      src: '~/assets/images/estetic_voucher.jpeg',
+      alt: 'Clínica de Estética - Ambiente sofisticado',
     }}
   />
+
+  <section class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">Nossa Localização</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Venha nos visitar em nossa clínica e aproveite para fazer uma avaliação presencial gratuita.
+      </p>
+    </div>
+
+    <div class="relative aspect-video md:aspect-[16/9] w-full overflow-hidden rounded-xl shadow-xl">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d961.9500726683514!2d-49.11812373042123!3d-15.333084599077798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935cc1f6c94e8431%3A0x59fa2857e2b70f5!2sNutriEssence%20-%20Sa%C3%BAde%20-%20Est%C3%A9tica%20-%20Nutri%C3%A7%C3%A3o!5e0!3m2!1sen!2sbr!4v1758217702939!5m2!1sen!2sbr"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="absolute inset-0"></iframe>
+    </div>
+
+    <div class="mt-8 text-center">
+      <p class="text-gray-700 dark:text-gray-300">
+        <strong>Nosso Endereço:</strong> Av. Goiás, numero 468, de frente ao Hotel Planalto, Goianésia, Goiás
+      </p>
+    </div>
+  </section>
 
   <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
-    columns={3}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
-      },
-      {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'E-commerce',
-        description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
-      },
-      {
-        title: 'Blog',
-        description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
-      },
-      {
-        title: 'Business',
-        description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
-      },
-      {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
-      },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'High-Quality Designs',
-        description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Customization Tools',
-        description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Pre-Designed Elements',
-        description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
-      },
-      {
-        title: 'Preview and Mockup Views',
-        description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
-    </Fragment>
-  </Content>
+  <div id="nossos-servicos">
+    <Features2
+      title="Nossos Principais Serviços"
+      subtitle="Oferecemos tratamentos estéticos avançados para realçar sua beleza natural."
+      columns={3}
+      items={[
+        {
+          title: 'Depilação a Laser',
+          description:
+            'Procedimentos precisos e eficientes para eliminação definitiva de pelos em todas as áreas do corpo, com tecnologia avançada e conforto.',
+          icon: 'tabler:razor',
+        },
+        {
+          title: 'Tratamentos Faciais',
+          description:
+            'Limpeza de pele, microagulhamento, peeling e outros procedimentos para revitalizar e rejuvenecer sua pele com resultados visíveis.',
+          icon: 'tabler:face-id',
+        },
+        {
+          title: 'Corporais',
+          description: `Redução de medidas, tratamento de gordura localizada e celulite com tecnologias como criolipólise, radiofrequência e enzimas lipolíticas.`,
+          icon: 'tabler:body-scan',
+        },
+        {
+          title: 'Preenchedores & Bioestimuladores',
+          description:
+            'Procedimentos de preenchimento facial e corporal para harmonizar features e restaurar volume, com resultados naturais e duradouros.',
+          icon: 'tabler:needle',
+        },
+        {
+          title: 'Massagens Especializadas',
+          description:
+            'Massagem modeladora, relaxante, drenagem linfática e pós-operatória para bem-estar e contorno corporal.',
+          icon: 'tabler:massage',
+        },
+        {
+          title: 'Toxina Botulínica',
+          description:
+            'Tratamento para suavizar linhas de expressão e rugas, proporcionando aparência rejuvenescida e natural.',
+          icon: 'tabler:face-mask',
+        },
+        {
+          title: 'Avaliações Especializadas',
+          description:
+            'Avaliação ultrassônica Bodymetriz e consultas com nutricionista para um acompanhamento personalizado dos seus objetivos.',
+          icon: 'tabler:clipboard-check',
+        },
+        {
+          title: 'Terapias Combinadas',
+          description: `Protocolos personalizados que combinam diferentes tecnologias para potencializar resultados e oferecer o melhor tratamento para suas necessidades.`,
+          icon: 'tabler:stack',
+        },
+        {
+          title: 'Promoção Especial',
+          description:
+            'Aproveite 25% de desconto em qualquer procedimento com nosso voucher exclusivo. Válido até 29/11/2025.',
+          icon: 'tabler:discount',
+        },
+      ]}
+    />
+  </div>
 
   <!-- Content Widget **************** -->
 
@@ -133,92 +120,39 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Time Savings',
+        title: 'Profissionais Qualificados',
         description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
+          'Nossa equipe é composta por especialistas com formação e experiência para oferecer tratamentos seguros e eficazes.',
+        icon: 'tabler:user-star',
       },
       {
-        title: 'Professional Appearance',
+        title: 'Tecnologia Avançada',
         description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
-        icon: 'tabler:school',
+          'Utilizamos equipamentos de última geração e técnicas modernas para garantir os melhores resultados em todos os procedimentos.',
+        icon: 'tabler:device-desktop-analytics',
       },
       {
-        title: 'Cost-Efficiency',
+        title: 'Ambiente Aconchegante',
         description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
-        icon: 'tabler:coin',
+          'Desfrute de um espaço exclusivo, clean e confortável, projetado para seu bem-estar durante todos os tratamentos.',
+        icon: 'tabler:home',
       },
       {
-        title: 'Instant Download',
+        title: 'Resultados Visíveis',
         description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
+          'Protocolos personalizados e acompanhamento próximo para garantir sua satisfação com resultados perceptíveis e duradouros.',
+        icon: 'tabler:chart-line',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
+      src: '~/assets/images/banner_nutriessence.jpeg',
+      alt: 'Benefícios dos nossos serviços estéticos',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Por que escolher nossa clínica?
+      </h3>
     </Fragment>
   </Content>
-
-  <!-- Testimonials Widget *********** -->
-
-  <Testimonials
-    title="Words from real customers"
-    testimonials={[
-      {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
-        },
-      },
-      {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
-        name: 'Sarah Hansen',
-        job: 'Photographer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
-        },
-      },
-      {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
-        name: 'Mark Wilkinson',
-        job: 'Small business owner',
-        image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
-        },
-      },
-    ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/arthelokyo/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
-      },
-    ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
-  />
 </Layout>
